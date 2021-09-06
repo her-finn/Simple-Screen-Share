@@ -11,6 +11,7 @@ cp .env.example .env
 php artisan key:generate
 nano .env
 php artisan migrate
+chown -R www-data:www-data *
 ```
 
 ## Screenshots:
