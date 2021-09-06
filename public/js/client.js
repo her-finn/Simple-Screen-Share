@@ -1,8 +1,11 @@
+let p = null;
 async function getMedia() {
+    $("#newStreamBtn").html("Stop sharing");
+    $("#newStreamBtn").attr("onclick","endStream();");
     let stream = null;
     try {
     stream = await navigator.mediaDevices.getDisplayMedia({audio: false, video: true});
-    const p = new Peer({
+    p = new Peer({
       initiator: false,
       trickle: false,
       stream: stream
@@ -27,12 +30,7 @@ async function getMedia() {
         }
       });
     });
-  
-    /* Get From Server */
-    /*document.querySelector('form').addEventListener('submit', ev => {
-      ev.preventDefault()
-      p.signal(JSON.parse(document.querySelector('#incoming').value))
-    })*/
+    /* Get from Server */
     $.ajax({
         method: "get",
         url: baseUrl + "/stream/" + streamId + "/data",
@@ -49,4 +47,12 @@ async function getMedia() {
   } catch(err) {
       console.log("Dat war wol nix mit dem Stream",err);
   }
+}
+function endStream(){
+    p.send("end");
+    $("#streamId").html('<h1 class="cover-heading text-center text-success">The Stream ended</h1><br><br><a onclick="location.href = \'' + baseUrl + '\'" class="ended">Go Back</a>');
+    setTimeout(function(){
+        console.log("Destroying Peer");
+        p.destroy();
+    },1000);
 }

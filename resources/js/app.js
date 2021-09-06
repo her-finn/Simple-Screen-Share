@@ -1,7 +1,11 @@
 require('./bootstrap');
 import $ from 'jquery';
 import SimplePeer from 'simple-peer';
+import swal from 'sweetalert2';
+import bootstrap from 'bootstrap';
+import qrcode from 'jquery-qrcode';
 window.$ = $;
+window.swal = swal;
 window.jQuery = $;
 window.Peer = SimplePeer;
 window.SimplePeer = SimplePeer;

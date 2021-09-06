@@ -16,7 +16,12 @@
         "postcss": "^8.1.14"
     },
     "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.15.4",
+        "@popperjs/core": "^2.10.1",
+        "bootstrap": "^5.1.0",
         "jquery": "^3.6.0",
-        "simple-peer": "^9.11.0"
+        "jquery-qrcode": "^1.0.0",
+        "simple-peer": "^9.11.0",
+        "sweetalert2": "^11.1.4"
     }
 }

@@ -14,14 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('start');
 });
-Route::get('/test', function () {
-    return view("test");
-});
-#Route::get('test-neu/{id}',[App\Http\Controllers\TestneuController::class,"main"]); 
 
-#Neuer Stream
+
+#New Stream
 Route::get("new/",[App\Http\Controllers\CreateStreamController::class,"showCreatePage"]);
 Route::get("new/{id}/secondClientId",[App\Http\Controllers\CreateStreamController::class,"secondClientId"]);
 Route::post("new/",[App\Http\Controllers\CreateStreamController::class,"createStream"]);

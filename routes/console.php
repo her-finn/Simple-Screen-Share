@@ -2,7 +2,7 @@
 
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
-
+use App\Models\Stream;
 /*
 |--------------------------------------------------------------------------
 | Console Routes
@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Artisan;
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->purpose('Display an inspiring quote');
+
+Artisan::command('cleanup',function(){
+    Stream::where("expires","<",time())->delete();
+    $this->comment("Cleanup successfull");
+})->purpose('Cleanup old Streams (Run with Cron)');
