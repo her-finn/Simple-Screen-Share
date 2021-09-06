@@ -30,4 +30,4 @@ crontab -e
 > necessary to share the screen. As soon as it becomes available, this
 > repository will be updated.
 
-### Thanks to [Simple-Peer]: https://github.com/feross/simple-peer on which the Project is based
+### Thanks to [Simple-Peer](https://github.com/feross/simple-peer) on which the Project is based
