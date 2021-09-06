@@ -3,3 +3,7 @@
 @import '~@fortawesome/fontawesome-free/css/solid';
 @import '~@fortawesome/fontawesome-free/css/fontawesome';
 @import '~bootstrap/dist/css/bootstrap.min.css';
+@media (max-width : 800px) {
+    .onlyMobile{ display: block!important; }
+    .onlyPc{display: none!important;}
+  }

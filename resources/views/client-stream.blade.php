@@ -19,13 +19,13 @@
           </div>
         </header>
   
-        <main role="main" class="inner cover" id="streamId">
+        <main role="main" class="inner cover onlyPc" id="streamId">
           <h1 class="cover-heading" style="width: 130%;">Share your Screen</h1><br><br>
           <p class="lead text-center" style="text-align: center!important;">
             <button class="btn btn-lg btn-outline-primary" onclick="getMedia();" style="font-size: 1.5em;" id="newStreamBtn">Share</button>
           </p>
         </main> 
-  
+        <h1 class="onlyMobile text-warning" style="display: none;">This Page is only available on PC</h1>
         <footer class="mastfoot mt-auto">
           <div class="inner" >
             <p>Easy Screen Share by <a href="https://github.com/her-finn">her-finn</a> <br>

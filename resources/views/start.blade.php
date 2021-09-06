@@ -20,7 +20,7 @@
           </div>
         </header>
   
-        <main role="main" class="inner cover">
+        <main role="main" class="inner cover onlyPc">
           <h1 class="cover-heading">Please enter your Stream-ID:</h1><br><br>
             <p class="lead text-center">
                 <form method="get" class="digit-group text-center" data-group-name="digits" data-autosubmit="false" autocomplete="off">
@@ -37,7 +37,7 @@
             <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
           </p-->
         </main>
-  
+        <h1 class="onlyMobile text-warning" style="display: none;">This Page is only available on PC</h1>
         <footer class="mastfoot mt-auto">
           <div class="inner">
             <p>Easy Screen Share by <a href="https://github.com/her-finn">her-finn</a> <br>
