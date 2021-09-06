@@ -13,6 +13,11 @@ nano .env
 php artisan migrate
 chown -R www-data:www-data *
 ```
+#### Crontab:
+```
+crontab -e
+*/10 * * * * /usr/bin/php /var/www/screen-share/artisan cleanup
+```
 
 ## Screenshots:
 ![image](https://user-images.githubusercontent.com/58078450/132226082-2964dbad-506f-4b2c-a2b4-afe2fb294030.png)
